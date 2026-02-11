@@ -1,5 +1,6 @@
 generator client {
   provider = "prisma-client-js"
+  // Pastikan output ini sesuai dengan import di PrismaService kamu
   output   = "../src/generated/prisma"
 }
 

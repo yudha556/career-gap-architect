@@ -1,6 +1,7 @@
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
+  // Pastikan output ini sesuai dengan import di PrismaService kamu
+  output   = "../src/generated/prisma" 
 }
 
 datasource db {

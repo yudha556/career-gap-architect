@@ -1,15 +1,19 @@
-import { Body, Controller, Post } from "@nestjs/common";
-import { AnalysisService } from "./analysis.service";
+import { Controller, Post, UseInterceptors, UploadedFile, Body, BadRequestException } from '@nestjs/common';
+import { FileInterceptor } from '@nestjs/platform-express';
+import { AnalysisService } from './analysis.service';
+import type { Express } from 'express'; 
 
-@Controller("analysis")
+@Controller('analysis')
 export class AnalysisController {
-  constructor(private readonly analysisService: AnalysisService) {}
+  constructor(private readonly service: AnalysisService) {}
 
   @Post()
-  analyze(
-    @Body()
-    body: { resumeText: string; jobDescText: string }
+  @UseInterceptors(FileInterceptor('file'))
+  async analyze(
+    @UploadedFile() file: Express.Multer.File,
+    @Body('jobDescription') jd: string,
   ) {
-    return this.analysisService.analyze(body.resumeText, body.jobDescText);
+    if (!file || !jd) throw new BadRequestException('File and Job Description are required');
+    return this.service.processGapAnalysis(file, jd);
   }
 }
