@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model AnalysisCache {
+  id          String   @id @default(cuid())
+  inputHash   String   @unique
+  resumeText  String
+  jobDescText String
+  resultJson  Json
+  createdAt   DateTime @default(now())
+}

@@ -5,8 +5,19 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  @Get('/health/db')
+  async dbCheck() {
+    try {
+      const count = await this.appService.getAnalysisCacheCount();
+      return {
+        ok: true,
+        analysisCacheCount: count,
+      };
+    } catch (error) {
+      return {
+        ok: false,
+        error: error instanceof Error ? error.message : 'Database connection failed',
+      };
+    }
   }
 }
