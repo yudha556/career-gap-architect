@@ -93,7 +93,7 @@ export default function RootLayout({
                 </Breadcrumb>
               </header>
               <Providers>
-                <main className="flex-1 p-6">
+                <main className="flex-1 p-6 bg-accent/30">
                   {children}
                 </main>
               </Providers>
