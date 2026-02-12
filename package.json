@@ -3,14 +3,15 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "dev:web": "pnpm --filter web dev --port 3000",
+    "dev:api": "pnpm --filter api exec cross-env PORT=4000 pnpm start:dev",
+    "dev": "concurrently -n \"WEB,API\" -c \"blue,green\" \"pnpm dev:web\" \"pnpm dev:api\""
   },
   "devDependencies": {
     "@workspace/eslint-config": "workspace:*",
     "@workspace/typescript-config": "workspace:*",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
     "prettier": "^3.8.1",
     "turbo": "^2.8.1",
     "typescript": "5.9.3"

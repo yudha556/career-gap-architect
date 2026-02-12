@@ -1,6 +1,5 @@
 generator client {
   provider = "prisma-client-js"
-  // Pastikan output ini sesuai dengan import di PrismaService kamu
   output   = "../src/generated/prisma"
 }
 
@@ -8,11 +7,16 @@ datasource db {
   provider = "postgresql"
 }
 
-model AnalysisCache {
+model AnalysisResult {
   id          String   @id @default(cuid())
   inputHash   String   @unique
-  resumeText  String
-  jobDescText String
+  matchScore  Int      @default(0)
+  jobTitle    String   @default("General Application")
+  resumeText  String   @db.Text
+  jobDescText String   @db.Text
   resultJson  Json
   createdAt   DateTime @default(now())
+
+  @@index([matchScore])
+  @@index([createdAt])
 }

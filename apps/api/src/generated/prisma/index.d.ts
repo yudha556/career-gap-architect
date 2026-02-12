@@ -14,10 +14,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model AnalysisCache
+ * Model AnalysisResult
  * 
  */
-export type AnalysisCache = $Result.DefaultSelection<Prisma.$AnalysisCachePayload>
+export type AnalysisResult = $Result.DefaultSelection<Prisma.$AnalysisResultPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -26,8 +26,8 @@ export type AnalysisCache = $Result.DefaultSelection<Prisma.$AnalysisCachePayloa
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more AnalysisCaches
- * const analysisCaches = await prisma.analysisCache.findMany()
+ * // Fetch zero or more AnalysisResults
+ * const analysisResults = await prisma.analysisResult.findMany()
  * ```
  *
  *
@@ -47,8 +47,8 @@ export class PrismaClient<
    * @example
    * ```
    * const prisma = new PrismaClient()
-   * // Fetch zero or more AnalysisCaches
-   * const analysisCaches = await prisma.analysisCache.findMany()
+   * // Fetch zero or more AnalysisResults
+   * const analysisResults = await prisma.analysisResult.findMany()
    * ```
    *
    *
@@ -137,14 +137,14 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.analysisCache`: Exposes CRUD operations for the **AnalysisCache** model.
+   * `prisma.analysisResult`: Exposes CRUD operations for the **AnalysisResult** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more AnalysisCaches
-    * const analysisCaches = await prisma.analysisCache.findMany()
+    * // Fetch zero or more AnalysisResults
+    * const analysisResults = await prisma.analysisResult.findMany()
     * ```
     */
-  get analysisCache(): Prisma.AnalysisCacheDelegate<ExtArgs, ClientOptions>;
+  get analysisResult(): Prisma.AnalysisResultDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -579,7 +579,7 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    AnalysisCache: 'AnalysisCache'
+    AnalysisResult: 'AnalysisResult'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -595,81 +595,81 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "analysisCache"
+      modelProps: "analysisResult"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      AnalysisCache: {
-        payload: Prisma.$AnalysisCachePayload<ExtArgs>
-        fields: Prisma.AnalysisCacheFieldRefs
+      AnalysisResult: {
+        payload: Prisma.$AnalysisResultPayload<ExtArgs>
+        fields: Prisma.AnalysisResultFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.AnalysisCacheFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AnalysisCachePayload> | null
+            args: Prisma.AnalysisResultFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalysisResultPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.AnalysisCacheFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AnalysisCachePayload>
+            args: Prisma.AnalysisResultFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalysisResultPayload>
           }
           findFirst: {
-            args: Prisma.AnalysisCacheFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AnalysisCachePayload> | null
+            args: Prisma.AnalysisResultFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalysisResultPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.AnalysisCacheFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AnalysisCachePayload>
+            args: Prisma.AnalysisResultFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalysisResultPayload>
           }
           findMany: {
-            args: Prisma.AnalysisCacheFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AnalysisCachePayload>[]
+            args: Prisma.AnalysisResultFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalysisResultPayload>[]
           }
           create: {
-            args: Prisma.AnalysisCacheCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AnalysisCachePayload>
+            args: Prisma.AnalysisResultCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalysisResultPayload>
           }
           createMany: {
-            args: Prisma.AnalysisCacheCreateManyArgs<ExtArgs>
+            args: Prisma.AnalysisResultCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.AnalysisCacheCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AnalysisCachePayload>[]
+            args: Prisma.AnalysisResultCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalysisResultPayload>[]
           }
           delete: {
-            args: Prisma.AnalysisCacheDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AnalysisCachePayload>
+            args: Prisma.AnalysisResultDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalysisResultPayload>
           }
           update: {
-            args: Prisma.AnalysisCacheUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AnalysisCachePayload>
+            args: Prisma.AnalysisResultUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalysisResultPayload>
           }
           deleteMany: {
-            args: Prisma.AnalysisCacheDeleteManyArgs<ExtArgs>
+            args: Prisma.AnalysisResultDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.AnalysisCacheUpdateManyArgs<ExtArgs>
+            args: Prisma.AnalysisResultUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.AnalysisCacheUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AnalysisCachePayload>[]
+            args: Prisma.AnalysisResultUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalysisResultPayload>[]
           }
           upsert: {
-            args: Prisma.AnalysisCacheUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AnalysisCachePayload>
+            args: Prisma.AnalysisResultUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AnalysisResultPayload>
           }
           aggregate: {
-            args: Prisma.AnalysisCacheAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateAnalysisCache>
+            args: Prisma.AnalysisResultAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateAnalysisResult>
           }
           groupBy: {
-            args: Prisma.AnalysisCacheGroupByArgs<ExtArgs>
-            result: $Utils.Optional<AnalysisCacheGroupByOutputType>[]
+            args: Prisma.AnalysisResultGroupByArgs<ExtArgs>
+            result: $Utils.Optional<AnalysisResultGroupByOutputType>[]
           }
           count: {
-            args: Prisma.AnalysisCacheCountArgs<ExtArgs>
-            result: $Utils.Optional<AnalysisCacheCountAggregateOutputType> | number
+            args: Prisma.AnalysisResultCountArgs<ExtArgs>
+            result: $Utils.Optional<AnalysisResultCountAggregateOutputType> | number
           }
         }
       }
@@ -781,7 +781,7 @@ export namespace Prisma {
     comments?: runtime.SqlCommenterPlugin[]
   }
   export type GlobalOmitConfig = {
-    analysisCache?: AnalysisCacheOmit
+    analysisResult?: AnalysisResultOmit
   }
 
   /* Types for Logging */
@@ -863,34 +863,50 @@ export namespace Prisma {
    */
 
   /**
-   * Model AnalysisCache
+   * Model AnalysisResult
    */
 
-  export type AggregateAnalysisCache = {
-    _count: AnalysisCacheCountAggregateOutputType | null
-    _min: AnalysisCacheMinAggregateOutputType | null
-    _max: AnalysisCacheMaxAggregateOutputType | null
+  export type AggregateAnalysisResult = {
+    _count: AnalysisResultCountAggregateOutputType | null
+    _avg: AnalysisResultAvgAggregateOutputType | null
+    _sum: AnalysisResultSumAggregateOutputType | null
+    _min: AnalysisResultMinAggregateOutputType | null
+    _max: AnalysisResultMaxAggregateOutputType | null
   }
 
-  export type AnalysisCacheMinAggregateOutputType = {
+  export type AnalysisResultAvgAggregateOutputType = {
+    matchScore: number | null
+  }
+
+  export type AnalysisResultSumAggregateOutputType = {
+    matchScore: number | null
+  }
+
+  export type AnalysisResultMinAggregateOutputType = {
     id: string | null
     inputHash: string | null
+    matchScore: number | null
+    jobTitle: string | null
     resumeText: string | null
     jobDescText: string | null
     createdAt: Date | null
   }
 
-  export type AnalysisCacheMaxAggregateOutputType = {
+  export type AnalysisResultMaxAggregateOutputType = {
     id: string | null
     inputHash: string | null
+    matchScore: number | null
+    jobTitle: string | null
     resumeText: string | null
     jobDescText: string | null
     createdAt: Date | null
   }
 
-  export type AnalysisCacheCountAggregateOutputType = {
+  export type AnalysisResultCountAggregateOutputType = {
     id: number
     inputHash: number
+    matchScore: number
+    jobTitle: number
     resumeText: number
     jobDescText: number
     resultJson: number
@@ -899,25 +915,39 @@ export namespace Prisma {
   }
 
 
-  export type AnalysisCacheMinAggregateInputType = {
+  export type AnalysisResultAvgAggregateInputType = {
+    matchScore?: true
+  }
+
+  export type AnalysisResultSumAggregateInputType = {
+    matchScore?: true
+  }
+
+  export type AnalysisResultMinAggregateInputType = {
     id?: true
     inputHash?: true
+    matchScore?: true
+    jobTitle?: true
     resumeText?: true
     jobDescText?: true
     createdAt?: true
   }
 
-  export type AnalysisCacheMaxAggregateInputType = {
+  export type AnalysisResultMaxAggregateInputType = {
     id?: true
     inputHash?: true
+    matchScore?: true
+    jobTitle?: true
     resumeText?: true
     jobDescText?: true
     createdAt?: true
   }
 
-  export type AnalysisCacheCountAggregateInputType = {
+  export type AnalysisResultCountAggregateInputType = {
     id?: true
     inputHash?: true
+    matchScore?: true
+    jobTitle?: true
     resumeText?: true
     jobDescText?: true
     resultJson?: true
@@ -925,282 +955,310 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type AnalysisCacheAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AnalysisResultAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which AnalysisCache to aggregate.
+     * Filter which AnalysisResult to aggregate.
      */
-    where?: AnalysisCacheWhereInput
+    where?: AnalysisResultWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of AnalysisCaches to fetch.
+     * Determine the order of AnalysisResults to fetch.
      */
-    orderBy?: AnalysisCacheOrderByWithRelationInput | AnalysisCacheOrderByWithRelationInput[]
+    orderBy?: AnalysisResultOrderByWithRelationInput | AnalysisResultOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: AnalysisCacheWhereUniqueInput
+    cursor?: AnalysisResultWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` AnalysisCaches from the position of the cursor.
+     * Take `±n` AnalysisResults from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` AnalysisCaches.
+     * Skip the first `n` AnalysisResults.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned AnalysisCaches
+     * Count returned AnalysisResults
     **/
-    _count?: true | AnalysisCacheCountAggregateInputType
+    _count?: true | AnalysisResultCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: AnalysisResultAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: AnalysisResultSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: AnalysisCacheMinAggregateInputType
+    _min?: AnalysisResultMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: AnalysisCacheMaxAggregateInputType
+    _max?: AnalysisResultMaxAggregateInputType
   }
 
-  export type GetAnalysisCacheAggregateType<T extends AnalysisCacheAggregateArgs> = {
-        [P in keyof T & keyof AggregateAnalysisCache]: P extends '_count' | 'count'
+  export type GetAnalysisResultAggregateType<T extends AnalysisResultAggregateArgs> = {
+        [P in keyof T & keyof AggregateAnalysisResult]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateAnalysisCache[P]>
-      : GetScalarType<T[P], AggregateAnalysisCache[P]>
+        : GetScalarType<T[P], AggregateAnalysisResult[P]>
+      : GetScalarType<T[P], AggregateAnalysisResult[P]>
   }
 
 
 
 
-  export type AnalysisCacheGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: AnalysisCacheWhereInput
-    orderBy?: AnalysisCacheOrderByWithAggregationInput | AnalysisCacheOrderByWithAggregationInput[]
-    by: AnalysisCacheScalarFieldEnum[] | AnalysisCacheScalarFieldEnum
-    having?: AnalysisCacheScalarWhereWithAggregatesInput
+  export type AnalysisResultGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: AnalysisResultWhereInput
+    orderBy?: AnalysisResultOrderByWithAggregationInput | AnalysisResultOrderByWithAggregationInput[]
+    by: AnalysisResultScalarFieldEnum[] | AnalysisResultScalarFieldEnum
+    having?: AnalysisResultScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: AnalysisCacheCountAggregateInputType | true
-    _min?: AnalysisCacheMinAggregateInputType
-    _max?: AnalysisCacheMaxAggregateInputType
+    _count?: AnalysisResultCountAggregateInputType | true
+    _avg?: AnalysisResultAvgAggregateInputType
+    _sum?: AnalysisResultSumAggregateInputType
+    _min?: AnalysisResultMinAggregateInputType
+    _max?: AnalysisResultMaxAggregateInputType
   }
 
-  export type AnalysisCacheGroupByOutputType = {
+  export type AnalysisResultGroupByOutputType = {
     id: string
     inputHash: string
+    matchScore: number
+    jobTitle: string
     resumeText: string
     jobDescText: string
     resultJson: JsonValue
     createdAt: Date
-    _count: AnalysisCacheCountAggregateOutputType | null
-    _min: AnalysisCacheMinAggregateOutputType | null
-    _max: AnalysisCacheMaxAggregateOutputType | null
+    _count: AnalysisResultCountAggregateOutputType | null
+    _avg: AnalysisResultAvgAggregateOutputType | null
+    _sum: AnalysisResultSumAggregateOutputType | null
+    _min: AnalysisResultMinAggregateOutputType | null
+    _max: AnalysisResultMaxAggregateOutputType | null
   }
 
-  type GetAnalysisCacheGroupByPayload<T extends AnalysisCacheGroupByArgs> = Prisma.PrismaPromise<
+  type GetAnalysisResultGroupByPayload<T extends AnalysisResultGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<AnalysisCacheGroupByOutputType, T['by']> &
+      PickEnumerable<AnalysisResultGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof AnalysisCacheGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof AnalysisResultGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], AnalysisCacheGroupByOutputType[P]>
-            : GetScalarType<T[P], AnalysisCacheGroupByOutputType[P]>
+              : GetScalarType<T[P], AnalysisResultGroupByOutputType[P]>
+            : GetScalarType<T[P], AnalysisResultGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type AnalysisCacheSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type AnalysisResultSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     inputHash?: boolean
+    matchScore?: boolean
+    jobTitle?: boolean
     resumeText?: boolean
     jobDescText?: boolean
     resultJson?: boolean
     createdAt?: boolean
-  }, ExtArgs["result"]["analysisCache"]>
+  }, ExtArgs["result"]["analysisResult"]>
 
-  export type AnalysisCacheSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type AnalysisResultSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     inputHash?: boolean
+    matchScore?: boolean
+    jobTitle?: boolean
     resumeText?: boolean
     jobDescText?: boolean
     resultJson?: boolean
     createdAt?: boolean
-  }, ExtArgs["result"]["analysisCache"]>
+  }, ExtArgs["result"]["analysisResult"]>
 
-  export type AnalysisCacheSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type AnalysisResultSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     inputHash?: boolean
+    matchScore?: boolean
+    jobTitle?: boolean
     resumeText?: boolean
     jobDescText?: boolean
     resultJson?: boolean
     createdAt?: boolean
-  }, ExtArgs["result"]["analysisCache"]>
+  }, ExtArgs["result"]["analysisResult"]>
 
-  export type AnalysisCacheSelectScalar = {
+  export type AnalysisResultSelectScalar = {
     id?: boolean
     inputHash?: boolean
+    matchScore?: boolean
+    jobTitle?: boolean
     resumeText?: boolean
     jobDescText?: boolean
     resultJson?: boolean
     createdAt?: boolean
   }
 
-  export type AnalysisCacheOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "inputHash" | "resumeText" | "jobDescText" | "resultJson" | "createdAt", ExtArgs["result"]["analysisCache"]>
+  export type AnalysisResultOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "inputHash" | "matchScore" | "jobTitle" | "resumeText" | "jobDescText" | "resultJson" | "createdAt", ExtArgs["result"]["analysisResult"]>
 
-  export type $AnalysisCachePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "AnalysisCache"
+  export type $AnalysisResultPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "AnalysisResult"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: string
       inputHash: string
+      matchScore: number
+      jobTitle: string
       resumeText: string
       jobDescText: string
       resultJson: Prisma.JsonValue
       createdAt: Date
-    }, ExtArgs["result"]["analysisCache"]>
+    }, ExtArgs["result"]["analysisResult"]>
     composites: {}
   }
 
-  type AnalysisCacheGetPayload<S extends boolean | null | undefined | AnalysisCacheDefaultArgs> = $Result.GetResult<Prisma.$AnalysisCachePayload, S>
+  type AnalysisResultGetPayload<S extends boolean | null | undefined | AnalysisResultDefaultArgs> = $Result.GetResult<Prisma.$AnalysisResultPayload, S>
 
-  type AnalysisCacheCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<AnalysisCacheFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: AnalysisCacheCountAggregateInputType | true
+  type AnalysisResultCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<AnalysisResultFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: AnalysisResultCountAggregateInputType | true
     }
 
-  export interface AnalysisCacheDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['AnalysisCache'], meta: { name: 'AnalysisCache' } }
+  export interface AnalysisResultDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['AnalysisResult'], meta: { name: 'AnalysisResult' } }
     /**
-     * Find zero or one AnalysisCache that matches the filter.
-     * @param {AnalysisCacheFindUniqueArgs} args - Arguments to find a AnalysisCache
+     * Find zero or one AnalysisResult that matches the filter.
+     * @param {AnalysisResultFindUniqueArgs} args - Arguments to find a AnalysisResult
      * @example
-     * // Get one AnalysisCache
-     * const analysisCache = await prisma.analysisCache.findUnique({
+     * // Get one AnalysisResult
+     * const analysisResult = await prisma.analysisResult.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends AnalysisCacheFindUniqueArgs>(args: SelectSubset<T, AnalysisCacheFindUniqueArgs<ExtArgs>>): Prisma__AnalysisCacheClient<$Result.GetResult<Prisma.$AnalysisCachePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends AnalysisResultFindUniqueArgs>(args: SelectSubset<T, AnalysisResultFindUniqueArgs<ExtArgs>>): Prisma__AnalysisResultClient<$Result.GetResult<Prisma.$AnalysisResultPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one AnalysisCache that matches the filter or throw an error with `error.code='P2025'`
+     * Find one AnalysisResult that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {AnalysisCacheFindUniqueOrThrowArgs} args - Arguments to find a AnalysisCache
+     * @param {AnalysisResultFindUniqueOrThrowArgs} args - Arguments to find a AnalysisResult
      * @example
-     * // Get one AnalysisCache
-     * const analysisCache = await prisma.analysisCache.findUniqueOrThrow({
+     * // Get one AnalysisResult
+     * const analysisResult = await prisma.analysisResult.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends AnalysisCacheFindUniqueOrThrowArgs>(args: SelectSubset<T, AnalysisCacheFindUniqueOrThrowArgs<ExtArgs>>): Prisma__AnalysisCacheClient<$Result.GetResult<Prisma.$AnalysisCachePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends AnalysisResultFindUniqueOrThrowArgs>(args: SelectSubset<T, AnalysisResultFindUniqueOrThrowArgs<ExtArgs>>): Prisma__AnalysisResultClient<$Result.GetResult<Prisma.$AnalysisResultPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first AnalysisCache that matches the filter.
+     * Find the first AnalysisResult that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AnalysisCacheFindFirstArgs} args - Arguments to find a AnalysisCache
+     * @param {AnalysisResultFindFirstArgs} args - Arguments to find a AnalysisResult
      * @example
-     * // Get one AnalysisCache
-     * const analysisCache = await prisma.analysisCache.findFirst({
+     * // Get one AnalysisResult
+     * const analysisResult = await prisma.analysisResult.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends AnalysisCacheFindFirstArgs>(args?: SelectSubset<T, AnalysisCacheFindFirstArgs<ExtArgs>>): Prisma__AnalysisCacheClient<$Result.GetResult<Prisma.$AnalysisCachePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends AnalysisResultFindFirstArgs>(args?: SelectSubset<T, AnalysisResultFindFirstArgs<ExtArgs>>): Prisma__AnalysisResultClient<$Result.GetResult<Prisma.$AnalysisResultPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first AnalysisCache that matches the filter or
+     * Find the first AnalysisResult that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AnalysisCacheFindFirstOrThrowArgs} args - Arguments to find a AnalysisCache
+     * @param {AnalysisResultFindFirstOrThrowArgs} args - Arguments to find a AnalysisResult
      * @example
-     * // Get one AnalysisCache
-     * const analysisCache = await prisma.analysisCache.findFirstOrThrow({
+     * // Get one AnalysisResult
+     * const analysisResult = await prisma.analysisResult.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends AnalysisCacheFindFirstOrThrowArgs>(args?: SelectSubset<T, AnalysisCacheFindFirstOrThrowArgs<ExtArgs>>): Prisma__AnalysisCacheClient<$Result.GetResult<Prisma.$AnalysisCachePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends AnalysisResultFindFirstOrThrowArgs>(args?: SelectSubset<T, AnalysisResultFindFirstOrThrowArgs<ExtArgs>>): Prisma__AnalysisResultClient<$Result.GetResult<Prisma.$AnalysisResultPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more AnalysisCaches that matches the filter.
+     * Find zero or more AnalysisResults that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AnalysisCacheFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {AnalysisResultFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all AnalysisCaches
-     * const analysisCaches = await prisma.analysisCache.findMany()
+     * // Get all AnalysisResults
+     * const analysisResults = await prisma.analysisResult.findMany()
      * 
-     * // Get first 10 AnalysisCaches
-     * const analysisCaches = await prisma.analysisCache.findMany({ take: 10 })
+     * // Get first 10 AnalysisResults
+     * const analysisResults = await prisma.analysisResult.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const analysisCacheWithIdOnly = await prisma.analysisCache.findMany({ select: { id: true } })
+     * const analysisResultWithIdOnly = await prisma.analysisResult.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends AnalysisCacheFindManyArgs>(args?: SelectSubset<T, AnalysisCacheFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AnalysisCachePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends AnalysisResultFindManyArgs>(args?: SelectSubset<T, AnalysisResultFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AnalysisResultPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a AnalysisCache.
-     * @param {AnalysisCacheCreateArgs} args - Arguments to create a AnalysisCache.
+     * Create a AnalysisResult.
+     * @param {AnalysisResultCreateArgs} args - Arguments to create a AnalysisResult.
      * @example
-     * // Create one AnalysisCache
-     * const AnalysisCache = await prisma.analysisCache.create({
+     * // Create one AnalysisResult
+     * const AnalysisResult = await prisma.analysisResult.create({
      *   data: {
-     *     // ... data to create a AnalysisCache
+     *     // ... data to create a AnalysisResult
      *   }
      * })
      * 
      */
-    create<T extends AnalysisCacheCreateArgs>(args: SelectSubset<T, AnalysisCacheCreateArgs<ExtArgs>>): Prisma__AnalysisCacheClient<$Result.GetResult<Prisma.$AnalysisCachePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends AnalysisResultCreateArgs>(args: SelectSubset<T, AnalysisResultCreateArgs<ExtArgs>>): Prisma__AnalysisResultClient<$Result.GetResult<Prisma.$AnalysisResultPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many AnalysisCaches.
-     * @param {AnalysisCacheCreateManyArgs} args - Arguments to create many AnalysisCaches.
+     * Create many AnalysisResults.
+     * @param {AnalysisResultCreateManyArgs} args - Arguments to create many AnalysisResults.
      * @example
-     * // Create many AnalysisCaches
-     * const analysisCache = await prisma.analysisCache.createMany({
+     * // Create many AnalysisResults
+     * const analysisResult = await prisma.analysisResult.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends AnalysisCacheCreateManyArgs>(args?: SelectSubset<T, AnalysisCacheCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends AnalysisResultCreateManyArgs>(args?: SelectSubset<T, AnalysisResultCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many AnalysisCaches and returns the data saved in the database.
-     * @param {AnalysisCacheCreateManyAndReturnArgs} args - Arguments to create many AnalysisCaches.
+     * Create many AnalysisResults and returns the data saved in the database.
+     * @param {AnalysisResultCreateManyAndReturnArgs} args - Arguments to create many AnalysisResults.
      * @example
-     * // Create many AnalysisCaches
-     * const analysisCache = await prisma.analysisCache.createManyAndReturn({
+     * // Create many AnalysisResults
+     * const analysisResult = await prisma.analysisResult.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many AnalysisCaches and only return the `id`
-     * const analysisCacheWithIdOnly = await prisma.analysisCache.createManyAndReturn({
+     * // Create many AnalysisResults and only return the `id`
+     * const analysisResultWithIdOnly = await prisma.analysisResult.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -1210,28 +1268,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends AnalysisCacheCreateManyAndReturnArgs>(args?: SelectSubset<T, AnalysisCacheCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AnalysisCachePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends AnalysisResultCreateManyAndReturnArgs>(args?: SelectSubset<T, AnalysisResultCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AnalysisResultPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a AnalysisCache.
-     * @param {AnalysisCacheDeleteArgs} args - Arguments to delete one AnalysisCache.
+     * Delete a AnalysisResult.
+     * @param {AnalysisResultDeleteArgs} args - Arguments to delete one AnalysisResult.
      * @example
-     * // Delete one AnalysisCache
-     * const AnalysisCache = await prisma.analysisCache.delete({
+     * // Delete one AnalysisResult
+     * const AnalysisResult = await prisma.analysisResult.delete({
      *   where: {
-     *     // ... filter to delete one AnalysisCache
+     *     // ... filter to delete one AnalysisResult
      *   }
      * })
      * 
      */
-    delete<T extends AnalysisCacheDeleteArgs>(args: SelectSubset<T, AnalysisCacheDeleteArgs<ExtArgs>>): Prisma__AnalysisCacheClient<$Result.GetResult<Prisma.$AnalysisCachePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends AnalysisResultDeleteArgs>(args: SelectSubset<T, AnalysisResultDeleteArgs<ExtArgs>>): Prisma__AnalysisResultClient<$Result.GetResult<Prisma.$AnalysisResultPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one AnalysisCache.
-     * @param {AnalysisCacheUpdateArgs} args - Arguments to update one AnalysisCache.
+     * Update one AnalysisResult.
+     * @param {AnalysisResultUpdateArgs} args - Arguments to update one AnalysisResult.
      * @example
-     * // Update one AnalysisCache
-     * const analysisCache = await prisma.analysisCache.update({
+     * // Update one AnalysisResult
+     * const analysisResult = await prisma.analysisResult.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1241,30 +1299,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends AnalysisCacheUpdateArgs>(args: SelectSubset<T, AnalysisCacheUpdateArgs<ExtArgs>>): Prisma__AnalysisCacheClient<$Result.GetResult<Prisma.$AnalysisCachePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends AnalysisResultUpdateArgs>(args: SelectSubset<T, AnalysisResultUpdateArgs<ExtArgs>>): Prisma__AnalysisResultClient<$Result.GetResult<Prisma.$AnalysisResultPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more AnalysisCaches.
-     * @param {AnalysisCacheDeleteManyArgs} args - Arguments to filter AnalysisCaches to delete.
+     * Delete zero or more AnalysisResults.
+     * @param {AnalysisResultDeleteManyArgs} args - Arguments to filter AnalysisResults to delete.
      * @example
-     * // Delete a few AnalysisCaches
-     * const { count } = await prisma.analysisCache.deleteMany({
+     * // Delete a few AnalysisResults
+     * const { count } = await prisma.analysisResult.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends AnalysisCacheDeleteManyArgs>(args?: SelectSubset<T, AnalysisCacheDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends AnalysisResultDeleteManyArgs>(args?: SelectSubset<T, AnalysisResultDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more AnalysisCaches.
+     * Update zero or more AnalysisResults.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AnalysisCacheUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {AnalysisResultUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many AnalysisCaches
-     * const analysisCache = await prisma.analysisCache.updateMany({
+     * // Update many AnalysisResults
+     * const analysisResult = await prisma.analysisResult.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1274,14 +1332,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends AnalysisCacheUpdateManyArgs>(args: SelectSubset<T, AnalysisCacheUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends AnalysisResultUpdateManyArgs>(args: SelectSubset<T, AnalysisResultUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more AnalysisCaches and returns the data updated in the database.
-     * @param {AnalysisCacheUpdateManyAndReturnArgs} args - Arguments to update many AnalysisCaches.
+     * Update zero or more AnalysisResults and returns the data updated in the database.
+     * @param {AnalysisResultUpdateManyAndReturnArgs} args - Arguments to update many AnalysisResults.
      * @example
-     * // Update many AnalysisCaches
-     * const analysisCache = await prisma.analysisCache.updateManyAndReturn({
+     * // Update many AnalysisResults
+     * const analysisResult = await prisma.analysisResult.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1290,8 +1348,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more AnalysisCaches and only return the `id`
-     * const analysisCacheWithIdOnly = await prisma.analysisCache.updateManyAndReturn({
+     * // Update zero or more AnalysisResults and only return the `id`
+     * const analysisResultWithIdOnly = await prisma.analysisResult.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -1304,56 +1362,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends AnalysisCacheUpdateManyAndReturnArgs>(args: SelectSubset<T, AnalysisCacheUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AnalysisCachePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends AnalysisResultUpdateManyAndReturnArgs>(args: SelectSubset<T, AnalysisResultUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AnalysisResultPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one AnalysisCache.
-     * @param {AnalysisCacheUpsertArgs} args - Arguments to update or create a AnalysisCache.
+     * Create or update one AnalysisResult.
+     * @param {AnalysisResultUpsertArgs} args - Arguments to update or create a AnalysisResult.
      * @example
-     * // Update or create a AnalysisCache
-     * const analysisCache = await prisma.analysisCache.upsert({
+     * // Update or create a AnalysisResult
+     * const analysisResult = await prisma.analysisResult.upsert({
      *   create: {
-     *     // ... data to create a AnalysisCache
+     *     // ... data to create a AnalysisResult
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the AnalysisCache we want to update
+     *     // ... the filter for the AnalysisResult we want to update
      *   }
      * })
      */
-    upsert<T extends AnalysisCacheUpsertArgs>(args: SelectSubset<T, AnalysisCacheUpsertArgs<ExtArgs>>): Prisma__AnalysisCacheClient<$Result.GetResult<Prisma.$AnalysisCachePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends AnalysisResultUpsertArgs>(args: SelectSubset<T, AnalysisResultUpsertArgs<ExtArgs>>): Prisma__AnalysisResultClient<$Result.GetResult<Prisma.$AnalysisResultPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of AnalysisCaches.
+     * Count the number of AnalysisResults.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AnalysisCacheCountArgs} args - Arguments to filter AnalysisCaches to count.
+     * @param {AnalysisResultCountArgs} args - Arguments to filter AnalysisResults to count.
      * @example
-     * // Count the number of AnalysisCaches
-     * const count = await prisma.analysisCache.count({
+     * // Count the number of AnalysisResults
+     * const count = await prisma.analysisResult.count({
      *   where: {
-     *     // ... the filter for the AnalysisCaches we want to count
+     *     // ... the filter for the AnalysisResults we want to count
      *   }
      * })
     **/
-    count<T extends AnalysisCacheCountArgs>(
-      args?: Subset<T, AnalysisCacheCountArgs>,
+    count<T extends AnalysisResultCountArgs>(
+      args?: Subset<T, AnalysisResultCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], AnalysisCacheCountAggregateOutputType>
+          : GetScalarType<T['select'], AnalysisResultCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a AnalysisCache.
+     * Allows you to perform aggregations operations on a AnalysisResult.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AnalysisCacheAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {AnalysisResultAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -1373,13 +1431,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends AnalysisCacheAggregateArgs>(args: Subset<T, AnalysisCacheAggregateArgs>): Prisma.PrismaPromise<GetAnalysisCacheAggregateType<T>>
+    aggregate<T extends AnalysisResultAggregateArgs>(args: Subset<T, AnalysisResultAggregateArgs>): Prisma.PrismaPromise<GetAnalysisResultAggregateType<T>>
 
     /**
-     * Group by AnalysisCache.
+     * Group by AnalysisResult.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AnalysisCacheGroupByArgs} args - Group by arguments.
+     * @param {AnalysisResultGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1394,14 +1452,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends AnalysisCacheGroupByArgs,
+      T extends AnalysisResultGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: AnalysisCacheGroupByArgs['orderBy'] }
-        : { orderBy?: AnalysisCacheGroupByArgs['orderBy'] },
+        ? { orderBy: AnalysisResultGroupByArgs['orderBy'] }
+        : { orderBy?: AnalysisResultGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1450,20 +1508,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, AnalysisCacheGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetAnalysisCacheGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, AnalysisResultGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetAnalysisResultGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the AnalysisCache model
+   * Fields of the AnalysisResult model
    */
-  readonly fields: AnalysisCacheFieldRefs;
+  readonly fields: AnalysisResultFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for AnalysisCache.
+   * The delegate class that acts as a "Promise-like" for AnalysisResult.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__AnalysisCacheClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__AnalysisResultClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1491,378 +1549,380 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the AnalysisCache model
+   * Fields of the AnalysisResult model
    */
-  interface AnalysisCacheFieldRefs {
-    readonly id: FieldRef<"AnalysisCache", 'String'>
-    readonly inputHash: FieldRef<"AnalysisCache", 'String'>
-    readonly resumeText: FieldRef<"AnalysisCache", 'String'>
-    readonly jobDescText: FieldRef<"AnalysisCache", 'String'>
-    readonly resultJson: FieldRef<"AnalysisCache", 'Json'>
-    readonly createdAt: FieldRef<"AnalysisCache", 'DateTime'>
+  interface AnalysisResultFieldRefs {
+    readonly id: FieldRef<"AnalysisResult", 'String'>
+    readonly inputHash: FieldRef<"AnalysisResult", 'String'>
+    readonly matchScore: FieldRef<"AnalysisResult", 'Int'>
+    readonly jobTitle: FieldRef<"AnalysisResult", 'String'>
+    readonly resumeText: FieldRef<"AnalysisResult", 'String'>
+    readonly jobDescText: FieldRef<"AnalysisResult", 'String'>
+    readonly resultJson: FieldRef<"AnalysisResult", 'Json'>
+    readonly createdAt: FieldRef<"AnalysisResult", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * AnalysisCache findUnique
+   * AnalysisResult findUnique
    */
-  export type AnalysisCacheFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AnalysisResultFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AnalysisCache
+     * Select specific fields to fetch from the AnalysisResult
      */
-    select?: AnalysisCacheSelect<ExtArgs> | null
+    select?: AnalysisResultSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AnalysisCache
+     * Omit specific fields from the AnalysisResult
      */
-    omit?: AnalysisCacheOmit<ExtArgs> | null
+    omit?: AnalysisResultOmit<ExtArgs> | null
     /**
-     * Filter, which AnalysisCache to fetch.
+     * Filter, which AnalysisResult to fetch.
      */
-    where: AnalysisCacheWhereUniqueInput
+    where: AnalysisResultWhereUniqueInput
   }
 
   /**
-   * AnalysisCache findUniqueOrThrow
+   * AnalysisResult findUniqueOrThrow
    */
-  export type AnalysisCacheFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AnalysisResultFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AnalysisCache
+     * Select specific fields to fetch from the AnalysisResult
      */
-    select?: AnalysisCacheSelect<ExtArgs> | null
+    select?: AnalysisResultSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AnalysisCache
+     * Omit specific fields from the AnalysisResult
      */
-    omit?: AnalysisCacheOmit<ExtArgs> | null
+    omit?: AnalysisResultOmit<ExtArgs> | null
     /**
-     * Filter, which AnalysisCache to fetch.
+     * Filter, which AnalysisResult to fetch.
      */
-    where: AnalysisCacheWhereUniqueInput
+    where: AnalysisResultWhereUniqueInput
   }
 
   /**
-   * AnalysisCache findFirst
+   * AnalysisResult findFirst
    */
-  export type AnalysisCacheFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AnalysisResultFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AnalysisCache
+     * Select specific fields to fetch from the AnalysisResult
      */
-    select?: AnalysisCacheSelect<ExtArgs> | null
+    select?: AnalysisResultSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AnalysisCache
+     * Omit specific fields from the AnalysisResult
      */
-    omit?: AnalysisCacheOmit<ExtArgs> | null
+    omit?: AnalysisResultOmit<ExtArgs> | null
     /**
-     * Filter, which AnalysisCache to fetch.
+     * Filter, which AnalysisResult to fetch.
      */
-    where?: AnalysisCacheWhereInput
+    where?: AnalysisResultWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of AnalysisCaches to fetch.
+     * Determine the order of AnalysisResults to fetch.
      */
-    orderBy?: AnalysisCacheOrderByWithRelationInput | AnalysisCacheOrderByWithRelationInput[]
+    orderBy?: AnalysisResultOrderByWithRelationInput | AnalysisResultOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for AnalysisCaches.
+     * Sets the position for searching for AnalysisResults.
      */
-    cursor?: AnalysisCacheWhereUniqueInput
+    cursor?: AnalysisResultWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` AnalysisCaches from the position of the cursor.
+     * Take `±n` AnalysisResults from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` AnalysisCaches.
+     * Skip the first `n` AnalysisResults.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of AnalysisCaches.
+     * Filter by unique combinations of AnalysisResults.
      */
-    distinct?: AnalysisCacheScalarFieldEnum | AnalysisCacheScalarFieldEnum[]
+    distinct?: AnalysisResultScalarFieldEnum | AnalysisResultScalarFieldEnum[]
   }
 
   /**
-   * AnalysisCache findFirstOrThrow
+   * AnalysisResult findFirstOrThrow
    */
-  export type AnalysisCacheFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AnalysisResultFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AnalysisCache
+     * Select specific fields to fetch from the AnalysisResult
      */
-    select?: AnalysisCacheSelect<ExtArgs> | null
+    select?: AnalysisResultSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AnalysisCache
+     * Omit specific fields from the AnalysisResult
      */
-    omit?: AnalysisCacheOmit<ExtArgs> | null
+    omit?: AnalysisResultOmit<ExtArgs> | null
     /**
-     * Filter, which AnalysisCache to fetch.
+     * Filter, which AnalysisResult to fetch.
      */
-    where?: AnalysisCacheWhereInput
+    where?: AnalysisResultWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of AnalysisCaches to fetch.
+     * Determine the order of AnalysisResults to fetch.
      */
-    orderBy?: AnalysisCacheOrderByWithRelationInput | AnalysisCacheOrderByWithRelationInput[]
+    orderBy?: AnalysisResultOrderByWithRelationInput | AnalysisResultOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for AnalysisCaches.
+     * Sets the position for searching for AnalysisResults.
      */
-    cursor?: AnalysisCacheWhereUniqueInput
+    cursor?: AnalysisResultWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` AnalysisCaches from the position of the cursor.
+     * Take `±n` AnalysisResults from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` AnalysisCaches.
+     * Skip the first `n` AnalysisResults.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of AnalysisCaches.
+     * Filter by unique combinations of AnalysisResults.
      */
-    distinct?: AnalysisCacheScalarFieldEnum | AnalysisCacheScalarFieldEnum[]
+    distinct?: AnalysisResultScalarFieldEnum | AnalysisResultScalarFieldEnum[]
   }
 
   /**
-   * AnalysisCache findMany
+   * AnalysisResult findMany
    */
-  export type AnalysisCacheFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AnalysisResultFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AnalysisCache
+     * Select specific fields to fetch from the AnalysisResult
      */
-    select?: AnalysisCacheSelect<ExtArgs> | null
+    select?: AnalysisResultSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AnalysisCache
+     * Omit specific fields from the AnalysisResult
      */
-    omit?: AnalysisCacheOmit<ExtArgs> | null
+    omit?: AnalysisResultOmit<ExtArgs> | null
     /**
-     * Filter, which AnalysisCaches to fetch.
+     * Filter, which AnalysisResults to fetch.
      */
-    where?: AnalysisCacheWhereInput
+    where?: AnalysisResultWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of AnalysisCaches to fetch.
+     * Determine the order of AnalysisResults to fetch.
      */
-    orderBy?: AnalysisCacheOrderByWithRelationInput | AnalysisCacheOrderByWithRelationInput[]
+    orderBy?: AnalysisResultOrderByWithRelationInput | AnalysisResultOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing AnalysisCaches.
+     * Sets the position for listing AnalysisResults.
      */
-    cursor?: AnalysisCacheWhereUniqueInput
+    cursor?: AnalysisResultWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` AnalysisCaches from the position of the cursor.
+     * Take `±n` AnalysisResults from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` AnalysisCaches.
+     * Skip the first `n` AnalysisResults.
      */
     skip?: number
-    distinct?: AnalysisCacheScalarFieldEnum | AnalysisCacheScalarFieldEnum[]
+    distinct?: AnalysisResultScalarFieldEnum | AnalysisResultScalarFieldEnum[]
   }
 
   /**
-   * AnalysisCache create
+   * AnalysisResult create
    */
-  export type AnalysisCacheCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AnalysisResultCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AnalysisCache
+     * Select specific fields to fetch from the AnalysisResult
      */
-    select?: AnalysisCacheSelect<ExtArgs> | null
+    select?: AnalysisResultSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AnalysisCache
+     * Omit specific fields from the AnalysisResult
      */
-    omit?: AnalysisCacheOmit<ExtArgs> | null
+    omit?: AnalysisResultOmit<ExtArgs> | null
     /**
-     * The data needed to create a AnalysisCache.
+     * The data needed to create a AnalysisResult.
      */
-    data: XOR<AnalysisCacheCreateInput, AnalysisCacheUncheckedCreateInput>
+    data: XOR<AnalysisResultCreateInput, AnalysisResultUncheckedCreateInput>
   }
 
   /**
-   * AnalysisCache createMany
+   * AnalysisResult createMany
    */
-  export type AnalysisCacheCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AnalysisResultCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many AnalysisCaches.
+     * The data used to create many AnalysisResults.
      */
-    data: AnalysisCacheCreateManyInput | AnalysisCacheCreateManyInput[]
+    data: AnalysisResultCreateManyInput | AnalysisResultCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * AnalysisCache createManyAndReturn
+   * AnalysisResult createManyAndReturn
    */
-  export type AnalysisCacheCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AnalysisResultCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AnalysisCache
+     * Select specific fields to fetch from the AnalysisResult
      */
-    select?: AnalysisCacheSelectCreateManyAndReturn<ExtArgs> | null
+    select?: AnalysisResultSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the AnalysisCache
+     * Omit specific fields from the AnalysisResult
      */
-    omit?: AnalysisCacheOmit<ExtArgs> | null
+    omit?: AnalysisResultOmit<ExtArgs> | null
     /**
-     * The data used to create many AnalysisCaches.
+     * The data used to create many AnalysisResults.
      */
-    data: AnalysisCacheCreateManyInput | AnalysisCacheCreateManyInput[]
+    data: AnalysisResultCreateManyInput | AnalysisResultCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * AnalysisCache update
+   * AnalysisResult update
    */
-  export type AnalysisCacheUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AnalysisResultUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AnalysisCache
+     * Select specific fields to fetch from the AnalysisResult
      */
-    select?: AnalysisCacheSelect<ExtArgs> | null
+    select?: AnalysisResultSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AnalysisCache
+     * Omit specific fields from the AnalysisResult
      */
-    omit?: AnalysisCacheOmit<ExtArgs> | null
+    omit?: AnalysisResultOmit<ExtArgs> | null
     /**
-     * The data needed to update a AnalysisCache.
+     * The data needed to update a AnalysisResult.
      */
-    data: XOR<AnalysisCacheUpdateInput, AnalysisCacheUncheckedUpdateInput>
+    data: XOR<AnalysisResultUpdateInput, AnalysisResultUncheckedUpdateInput>
     /**
-     * Choose, which AnalysisCache to update.
+     * Choose, which AnalysisResult to update.
      */
-    where: AnalysisCacheWhereUniqueInput
+    where: AnalysisResultWhereUniqueInput
   }
 
   /**
-   * AnalysisCache updateMany
+   * AnalysisResult updateMany
    */
-  export type AnalysisCacheUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AnalysisResultUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update AnalysisCaches.
+     * The data used to update AnalysisResults.
      */
-    data: XOR<AnalysisCacheUpdateManyMutationInput, AnalysisCacheUncheckedUpdateManyInput>
+    data: XOR<AnalysisResultUpdateManyMutationInput, AnalysisResultUncheckedUpdateManyInput>
     /**
-     * Filter which AnalysisCaches to update
+     * Filter which AnalysisResults to update
      */
-    where?: AnalysisCacheWhereInput
+    where?: AnalysisResultWhereInput
     /**
-     * Limit how many AnalysisCaches to update.
+     * Limit how many AnalysisResults to update.
      */
     limit?: number
   }
 
   /**
-   * AnalysisCache updateManyAndReturn
+   * AnalysisResult updateManyAndReturn
    */
-  export type AnalysisCacheUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AnalysisResultUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AnalysisCache
+     * Select specific fields to fetch from the AnalysisResult
      */
-    select?: AnalysisCacheSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: AnalysisResultSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the AnalysisCache
+     * Omit specific fields from the AnalysisResult
      */
-    omit?: AnalysisCacheOmit<ExtArgs> | null
+    omit?: AnalysisResultOmit<ExtArgs> | null
     /**
-     * The data used to update AnalysisCaches.
+     * The data used to update AnalysisResults.
      */
-    data: XOR<AnalysisCacheUpdateManyMutationInput, AnalysisCacheUncheckedUpdateManyInput>
+    data: XOR<AnalysisResultUpdateManyMutationInput, AnalysisResultUncheckedUpdateManyInput>
     /**
-     * Filter which AnalysisCaches to update
+     * Filter which AnalysisResults to update
      */
-    where?: AnalysisCacheWhereInput
+    where?: AnalysisResultWhereInput
     /**
-     * Limit how many AnalysisCaches to update.
+     * Limit how many AnalysisResults to update.
      */
     limit?: number
   }
 
   /**
-   * AnalysisCache upsert
+   * AnalysisResult upsert
    */
-  export type AnalysisCacheUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AnalysisResultUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AnalysisCache
+     * Select specific fields to fetch from the AnalysisResult
      */
-    select?: AnalysisCacheSelect<ExtArgs> | null
+    select?: AnalysisResultSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AnalysisCache
+     * Omit specific fields from the AnalysisResult
      */
-    omit?: AnalysisCacheOmit<ExtArgs> | null
+    omit?: AnalysisResultOmit<ExtArgs> | null
     /**
-     * The filter to search for the AnalysisCache to update in case it exists.
+     * The filter to search for the AnalysisResult to update in case it exists.
      */
-    where: AnalysisCacheWhereUniqueInput
+    where: AnalysisResultWhereUniqueInput
     /**
-     * In case the AnalysisCache found by the `where` argument doesn't exist, create a new AnalysisCache with this data.
+     * In case the AnalysisResult found by the `where` argument doesn't exist, create a new AnalysisResult with this data.
      */
-    create: XOR<AnalysisCacheCreateInput, AnalysisCacheUncheckedCreateInput>
+    create: XOR<AnalysisResultCreateInput, AnalysisResultUncheckedCreateInput>
     /**
-     * In case the AnalysisCache was found with the provided `where` argument, update it with this data.
+     * In case the AnalysisResult was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<AnalysisCacheUpdateInput, AnalysisCacheUncheckedUpdateInput>
+    update: XOR<AnalysisResultUpdateInput, AnalysisResultUncheckedUpdateInput>
   }
 
   /**
-   * AnalysisCache delete
+   * AnalysisResult delete
    */
-  export type AnalysisCacheDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AnalysisResultDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AnalysisCache
+     * Select specific fields to fetch from the AnalysisResult
      */
-    select?: AnalysisCacheSelect<ExtArgs> | null
+    select?: AnalysisResultSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AnalysisCache
+     * Omit specific fields from the AnalysisResult
      */
-    omit?: AnalysisCacheOmit<ExtArgs> | null
+    omit?: AnalysisResultOmit<ExtArgs> | null
     /**
-     * Filter which AnalysisCache to delete.
+     * Filter which AnalysisResult to delete.
      */
-    where: AnalysisCacheWhereUniqueInput
+    where: AnalysisResultWhereUniqueInput
   }
 
   /**
-   * AnalysisCache deleteMany
+   * AnalysisResult deleteMany
    */
-  export type AnalysisCacheDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AnalysisResultDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which AnalysisCaches to delete
+     * Filter which AnalysisResults to delete
      */
-    where?: AnalysisCacheWhereInput
+    where?: AnalysisResultWhereInput
     /**
-     * Limit how many AnalysisCaches to delete.
+     * Limit how many AnalysisResults to delete.
      */
     limit?: number
   }
 
   /**
-   * AnalysisCache without action
+   * AnalysisResult without action
    */
-  export type AnalysisCacheDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AnalysisResultDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AnalysisCache
+     * Select specific fields to fetch from the AnalysisResult
      */
-    select?: AnalysisCacheSelect<ExtArgs> | null
+    select?: AnalysisResultSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AnalysisCache
+     * Omit specific fields from the AnalysisResult
      */
-    omit?: AnalysisCacheOmit<ExtArgs> | null
+    omit?: AnalysisResultOmit<ExtArgs> | null
   }
 
 
@@ -1880,16 +1940,18 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const AnalysisCacheScalarFieldEnum: {
+  export const AnalysisResultScalarFieldEnum: {
     id: 'id',
     inputHash: 'inputHash',
+    matchScore: 'matchScore',
+    jobTitle: 'jobTitle',
     resumeText: 'resumeText',
     jobDescText: 'jobDescText',
     resultJson: 'resultJson',
     createdAt: 'createdAt'
   };
 
-  export type AnalysisCacheScalarFieldEnum = (typeof AnalysisCacheScalarFieldEnum)[keyof typeof AnalysisCacheScalarFieldEnum]
+  export type AnalysisResultScalarFieldEnum = (typeof AnalysisResultScalarFieldEnum)[keyof typeof AnalysisResultScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -1944,6 +2006,20 @@ export namespace Prisma {
 
 
   /**
+   * Reference to a field of type 'Int'
+   */
+  export type IntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int'>
+    
+
+
+  /**
+   * Reference to a field of type 'Int[]'
+   */
+  export type ListIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int[]'>
+    
+
+
+  /**
    * Reference to a field of type 'Json'
    */
   export type JsonFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Json'>
@@ -1972,136 +2048,162 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'Int'
+   * Reference to a field of type 'Float'
    */
-  export type IntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int'>
+  export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float'>
     
 
 
   /**
-   * Reference to a field of type 'Int[]'
+   * Reference to a field of type 'Float[]'
    */
-  export type ListIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int[]'>
+  export type ListFloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float[]'>
     
   /**
    * Deep Input Types
    */
 
 
-  export type AnalysisCacheWhereInput = {
-    AND?: AnalysisCacheWhereInput | AnalysisCacheWhereInput[]
-    OR?: AnalysisCacheWhereInput[]
-    NOT?: AnalysisCacheWhereInput | AnalysisCacheWhereInput[]
-    id?: StringFilter<"AnalysisCache"> | string
-    inputHash?: StringFilter<"AnalysisCache"> | string
-    resumeText?: StringFilter<"AnalysisCache"> | string
-    jobDescText?: StringFilter<"AnalysisCache"> | string
-    resultJson?: JsonFilter<"AnalysisCache">
-    createdAt?: DateTimeFilter<"AnalysisCache"> | Date | string
+  export type AnalysisResultWhereInput = {
+    AND?: AnalysisResultWhereInput | AnalysisResultWhereInput[]
+    OR?: AnalysisResultWhereInput[]
+    NOT?: AnalysisResultWhereInput | AnalysisResultWhereInput[]
+    id?: StringFilter<"AnalysisResult"> | string
+    inputHash?: StringFilter<"AnalysisResult"> | string
+    matchScore?: IntFilter<"AnalysisResult"> | number
+    jobTitle?: StringFilter<"AnalysisResult"> | string
+    resumeText?: StringFilter<"AnalysisResult"> | string
+    jobDescText?: StringFilter<"AnalysisResult"> | string
+    resultJson?: JsonFilter<"AnalysisResult">
+    createdAt?: DateTimeFilter<"AnalysisResult"> | Date | string
   }
 
-  export type AnalysisCacheOrderByWithRelationInput = {
+  export type AnalysisResultOrderByWithRelationInput = {
     id?: SortOrder
     inputHash?: SortOrder
+    matchScore?: SortOrder
+    jobTitle?: SortOrder
     resumeText?: SortOrder
     jobDescText?: SortOrder
     resultJson?: SortOrder
     createdAt?: SortOrder
   }
 
-  export type AnalysisCacheWhereUniqueInput = Prisma.AtLeast<{
+  export type AnalysisResultWhereUniqueInput = Prisma.AtLeast<{
     id?: string
     inputHash?: string
-    AND?: AnalysisCacheWhereInput | AnalysisCacheWhereInput[]
-    OR?: AnalysisCacheWhereInput[]
-    NOT?: AnalysisCacheWhereInput | AnalysisCacheWhereInput[]
-    resumeText?: StringFilter<"AnalysisCache"> | string
-    jobDescText?: StringFilter<"AnalysisCache"> | string
-    resultJson?: JsonFilter<"AnalysisCache">
-    createdAt?: DateTimeFilter<"AnalysisCache"> | Date | string
+    AND?: AnalysisResultWhereInput | AnalysisResultWhereInput[]
+    OR?: AnalysisResultWhereInput[]
+    NOT?: AnalysisResultWhereInput | AnalysisResultWhereInput[]
+    matchScore?: IntFilter<"AnalysisResult"> | number
+    jobTitle?: StringFilter<"AnalysisResult"> | string
+    resumeText?: StringFilter<"AnalysisResult"> | string
+    jobDescText?: StringFilter<"AnalysisResult"> | string
+    resultJson?: JsonFilter<"AnalysisResult">
+    createdAt?: DateTimeFilter<"AnalysisResult"> | Date | string
   }, "id" | "inputHash">
 
-  export type AnalysisCacheOrderByWithAggregationInput = {
+  export type AnalysisResultOrderByWithAggregationInput = {
     id?: SortOrder
     inputHash?: SortOrder
+    matchScore?: SortOrder
+    jobTitle?: SortOrder
     resumeText?: SortOrder
     jobDescText?: SortOrder
     resultJson?: SortOrder
     createdAt?: SortOrder
-    _count?: AnalysisCacheCountOrderByAggregateInput
-    _max?: AnalysisCacheMaxOrderByAggregateInput
-    _min?: AnalysisCacheMinOrderByAggregateInput
+    _count?: AnalysisResultCountOrderByAggregateInput
+    _avg?: AnalysisResultAvgOrderByAggregateInput
+    _max?: AnalysisResultMaxOrderByAggregateInput
+    _min?: AnalysisResultMinOrderByAggregateInput
+    _sum?: AnalysisResultSumOrderByAggregateInput
   }
 
-  export type AnalysisCacheScalarWhereWithAggregatesInput = {
-    AND?: AnalysisCacheScalarWhereWithAggregatesInput | AnalysisCacheScalarWhereWithAggregatesInput[]
-    OR?: AnalysisCacheScalarWhereWithAggregatesInput[]
-    NOT?: AnalysisCacheScalarWhereWithAggregatesInput | AnalysisCacheScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"AnalysisCache"> | string
-    inputHash?: StringWithAggregatesFilter<"AnalysisCache"> | string
-    resumeText?: StringWithAggregatesFilter<"AnalysisCache"> | string
-    jobDescText?: StringWithAggregatesFilter<"AnalysisCache"> | string
-    resultJson?: JsonWithAggregatesFilter<"AnalysisCache">
-    createdAt?: DateTimeWithAggregatesFilter<"AnalysisCache"> | Date | string
+  export type AnalysisResultScalarWhereWithAggregatesInput = {
+    AND?: AnalysisResultScalarWhereWithAggregatesInput | AnalysisResultScalarWhereWithAggregatesInput[]
+    OR?: AnalysisResultScalarWhereWithAggregatesInput[]
+    NOT?: AnalysisResultScalarWhereWithAggregatesInput | AnalysisResultScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"AnalysisResult"> | string
+    inputHash?: StringWithAggregatesFilter<"AnalysisResult"> | string
+    matchScore?: IntWithAggregatesFilter<"AnalysisResult"> | number
+    jobTitle?: StringWithAggregatesFilter<"AnalysisResult"> | string
+    resumeText?: StringWithAggregatesFilter<"AnalysisResult"> | string
+    jobDescText?: StringWithAggregatesFilter<"AnalysisResult"> | string
+    resultJson?: JsonWithAggregatesFilter<"AnalysisResult">
+    createdAt?: DateTimeWithAggregatesFilter<"AnalysisResult"> | Date | string
   }
 
-  export type AnalysisCacheCreateInput = {
+  export type AnalysisResultCreateInput = {
     id?: string
     inputHash: string
+    matchScore?: number
+    jobTitle?: string
     resumeText: string
     jobDescText: string
     resultJson: JsonNullValueInput | InputJsonValue
     createdAt?: Date | string
   }
 
-  export type AnalysisCacheUncheckedCreateInput = {
+  export type AnalysisResultUncheckedCreateInput = {
     id?: string
     inputHash: string
+    matchScore?: number
+    jobTitle?: string
     resumeText: string
     jobDescText: string
     resultJson: JsonNullValueInput | InputJsonValue
     createdAt?: Date | string
   }
 
-  export type AnalysisCacheUpdateInput = {
+  export type AnalysisResultUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     inputHash?: StringFieldUpdateOperationsInput | string
+    matchScore?: IntFieldUpdateOperationsInput | number
+    jobTitle?: StringFieldUpdateOperationsInput | string
     resumeText?: StringFieldUpdateOperationsInput | string
     jobDescText?: StringFieldUpdateOperationsInput | string
     resultJson?: JsonNullValueInput | InputJsonValue
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type AnalysisCacheUncheckedUpdateInput = {
+  export type AnalysisResultUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     inputHash?: StringFieldUpdateOperationsInput | string
+    matchScore?: IntFieldUpdateOperationsInput | number
+    jobTitle?: StringFieldUpdateOperationsInput | string
     resumeText?: StringFieldUpdateOperationsInput | string
     jobDescText?: StringFieldUpdateOperationsInput | string
     resultJson?: JsonNullValueInput | InputJsonValue
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type AnalysisCacheCreateManyInput = {
+  export type AnalysisResultCreateManyInput = {
     id?: string
     inputHash: string
+    matchScore?: number
+    jobTitle?: string
     resumeText: string
     jobDescText: string
     resultJson: JsonNullValueInput | InputJsonValue
     createdAt?: Date | string
   }
 
-  export type AnalysisCacheUpdateManyMutationInput = {
+  export type AnalysisResultUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     inputHash?: StringFieldUpdateOperationsInput | string
+    matchScore?: IntFieldUpdateOperationsInput | number
+    jobTitle?: StringFieldUpdateOperationsInput | string
     resumeText?: StringFieldUpdateOperationsInput | string
     jobDescText?: StringFieldUpdateOperationsInput | string
     resultJson?: JsonNullValueInput | InputJsonValue
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type AnalysisCacheUncheckedUpdateManyInput = {
+  export type AnalysisResultUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     inputHash?: StringFieldUpdateOperationsInput | string
+    matchScore?: IntFieldUpdateOperationsInput | number
+    jobTitle?: StringFieldUpdateOperationsInput | string
     resumeText?: StringFieldUpdateOperationsInput | string
     jobDescText?: StringFieldUpdateOperationsInput | string
     resultJson?: JsonNullValueInput | InputJsonValue
@@ -2121,6 +2223,17 @@ export namespace Prisma {
     endsWith?: string | StringFieldRefInput<$PrismaModel>
     mode?: QueryMode
     not?: NestedStringFilter<$PrismaModel> | string
+  }
+
+  export type IntFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel>
+    in?: number[] | ListIntFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntFilter<$PrismaModel> | number
   }
   export type JsonFilter<$PrismaModel = never> =
     | PatchUndefined<
@@ -2157,29 +2270,43 @@ export namespace Prisma {
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
-  export type AnalysisCacheCountOrderByAggregateInput = {
+  export type AnalysisResultCountOrderByAggregateInput = {
     id?: SortOrder
     inputHash?: SortOrder
+    matchScore?: SortOrder
+    jobTitle?: SortOrder
     resumeText?: SortOrder
     jobDescText?: SortOrder
     resultJson?: SortOrder
     createdAt?: SortOrder
   }
 
-  export type AnalysisCacheMaxOrderByAggregateInput = {
+  export type AnalysisResultAvgOrderByAggregateInput = {
+    matchScore?: SortOrder
+  }
+
+  export type AnalysisResultMaxOrderByAggregateInput = {
     id?: SortOrder
     inputHash?: SortOrder
+    matchScore?: SortOrder
+    jobTitle?: SortOrder
     resumeText?: SortOrder
     jobDescText?: SortOrder
     createdAt?: SortOrder
   }
 
-  export type AnalysisCacheMinOrderByAggregateInput = {
+  export type AnalysisResultMinOrderByAggregateInput = {
     id?: SortOrder
     inputHash?: SortOrder
+    matchScore?: SortOrder
+    jobTitle?: SortOrder
     resumeText?: SortOrder
     jobDescText?: SortOrder
     createdAt?: SortOrder
+  }
+
+  export type AnalysisResultSumOrderByAggregateInput = {
+    matchScore?: SortOrder
   }
 
   export type StringWithAggregatesFilter<$PrismaModel = never> = {
@@ -2198,6 +2325,22 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedStringFilter<$PrismaModel>
     _max?: NestedStringFilter<$PrismaModel>
+  }
+
+  export type IntWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel>
+    in?: number[] | ListIntFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedIntFilter<$PrismaModel>
+    _min?: NestedIntFilter<$PrismaModel>
+    _max?: NestedIntFilter<$PrismaModel>
   }
   export type JsonWithAggregatesFilter<$PrismaModel = never> =
     | PatchUndefined<
@@ -2244,6 +2387,14 @@ export namespace Prisma {
     set?: string
   }
 
+  export type IntFieldUpdateOperationsInput = {
+    set?: number
+    increment?: number
+    decrement?: number
+    multiply?: number
+    divide?: number
+  }
+
   export type DateTimeFieldUpdateOperationsInput = {
     set?: Date | string
   }
@@ -2260,6 +2411,17 @@ export namespace Prisma {
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
     not?: NestedStringFilter<$PrismaModel> | string
+  }
+
+  export type NestedIntFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel>
+    in?: number[] | ListIntFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntFilter<$PrismaModel> | number
   }
 
   export type NestedDateTimeFilter<$PrismaModel = never> = {
@@ -2290,7 +2452,7 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
-  export type NestedIntFilter<$PrismaModel = never> = {
+  export type NestedIntWithAggregatesFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel>
     in?: number[] | ListIntFieldRefInput<$PrismaModel>
     notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
@@ -2298,7 +2460,23 @@ export namespace Prisma {
     lte?: number | IntFieldRefInput<$PrismaModel>
     gt?: number | IntFieldRefInput<$PrismaModel>
     gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntFilter<$PrismaModel> | number
+    not?: NestedIntWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedIntFilter<$PrismaModel>
+    _min?: NestedIntFilter<$PrismaModel>
+    _max?: NestedIntFilter<$PrismaModel>
+  }
+
+  export type NestedFloatFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatFilter<$PrismaModel> | number
   }
   export type NestedJsonFilter<$PrismaModel = never> =
     | PatchUndefined<

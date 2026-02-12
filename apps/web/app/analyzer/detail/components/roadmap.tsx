@@ -1,18 +1,13 @@
 import { Card } from "@workspace/ui/components/card";
-import { Map, MessageSquare } from "lucide-react";
+import { Map, MessageSquare, Clock, Lightbulb } from "lucide-react";
+import { Badge } from "@workspace/ui/components/badge";
 
-export default function Roadmap() {
-    const dummy = [
-        { nomor: 1, title: "Master Containerization with Docker", deskriptiopn: "Focus on Docker fundamentals. Learn how to build, run, and manage containers effectively. Practice with real-world examples." },
-        { nomor: 2, title: "Master Kubernetes", deskriptiopn: "Learn Kubernetes concepts and how to deploy and manage applications in a containerized environment." },
-        { nomor: 3, title: "Advanced DevOps Practices", deskriptiopn: "Explore advanced DevOps practices including CI/CD pipelines, infrastructure as code, and monitoring strategies." },
-    ]
+interface RoadmapProps {
+    roadmap: { step: string; description: string; estimatedTime?: string }[];
+    questions: { question: string; starAnswerGuide: string }[];
+}
 
-    const preparation = [
-        { question: "1. What is Docker and how does it work?", deskriptiopn: "Docker is a platform that uses OS-level virtualization to deliver software in packages called containers. Containers are lightweight, portable, and ensure consistency across multiple development and release cycles." },
-        { question: "2. What are Docker images and containers?", deskriptiopn: "Docker images are read-only templates used to create containers. Containers are running instances of Docker images." },
-        { question: "3. How do you build a Docker image?", deskriptiopn: "You build a Docker image using a Dockerfile, which contains instructions for building the image." },
-    ]
+export default function Roadmap({ roadmap, questions }: RoadmapProps) {
     return (
         <Card className="w-full p-4 shadow-md flex flex-col gap-8">
             <div className="flex flex-row gap-4 items-center border-b pb-3 border-gray-300">
@@ -21,30 +16,55 @@ export default function Roadmap() {
             </div>
 
             <div className="flex flex-col gap-8">
-                {dummy.map((item) => (
-                    <div key={item.nomor} className="flex flex-row gap-6">
-                        <div className="flex items-center justify-center min-w-10 h-10 bg-blue-100 rounded-full">
-                            <span className="text-blue-600 font-bold">{item.nomor}</span>
+                {roadmap.map((item, index) => (
+                    <div key={index} className="flex flex-row gap-6 w-full">
+                        <div className="flex flex-col items-center gap-2">
+                            <div className="flex items-center justify-center min-w-10 h-10 bg-blue-100 rounded-full">
+                                <span className="text-blue-600 font-bold">{item.step}</span>
+                            </div>
                         </div>
-                        <div className="flex flex-col gap-1">
-                            <h2 className="font-semibold">{item.title}</h2>
-                            <p className="text-sm text-gray-500">{item.deskriptiopn}</p>
+                        
+                        <div className="flex flex-col gap-2 pb-6 flex-1">
+                            <div className="flex flex-row justify-between items-start w-full">
+                                <h2 className="font-semibold text-lg">
+                                    Phase {item.step}
+                                </h2>
+
+                                {item.estimatedTime && (
+                                    <Badge variant="secondary" className="text-xs flex gap-1 whitespace-nowrap shrink-0">
+                                        <Clock className="w-3 h-3" /> {item.estimatedTime}
+                                    </Badge>
+                                )}
+                            </div>
+                            
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                {item.description}
+                            </p>
                         </div>
                     </div>
                 ))}
             </div>
 
-            <div className="flex flex-col gap-6 mt-5">
+            <div className="flex flex-col gap-6 mt-2">
                 <div className="flex flex-row gap-4 items-center pb-3 border-b border-gray-300">
                     <MessageSquare className="text-blue-600" />
-                    <h1 className="text-md font-semibold">Preparation: Top Interview Questions</h1>
+                    <h1 className="text-md font-semibold">Top Interview Questions (STAR Method)</h1>
                 </div>
 
-                <div className="flex flex-col gap-4 ">
-                    {preparation.map((item, index) => (
-                        <Card key={index} className="p-4 flex flex-col gap-3 bg-accent/30 shadow-md border-l-3 border-blue-600 min-h-30">
-                            <h1 className="font-semibold text-md">{item.question}</h1>
-                            <p className="text-sm text-gray-500">{item.deskriptiopn}</p>
+                <div className="flex flex-col gap-6">
+                    {questions.map((q, index) => (
+                        <Card key={index} className="p-5 flex flex-col gap-3 bg-white shadow-sm border border-gray-200">
+                            <h1 className="font-bold text-md text-gray-800">Q: {q.question}</h1>
+                            
+                            <div className="flex flex-row gap-3 bg-blue-50 p-3 rounded-md">
+                                <Lightbulb className="text-yellow-600 w-5 h-5 min-w-5 mt-0.5" />
+                                <div className="flex flex-col gap-1">
+                                    <span className="text-xs font-bold text-blue-700 uppercase">How to answer (STAR):</span>
+                                    <p className="text-sm text-blue-900 leading-relaxed">
+                                        {q.starAnswerGuide}
+                                    </p>
+                                </div>
+                            </div>
                         </Card>
                     ))}
                 </div>

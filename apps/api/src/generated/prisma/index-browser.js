@@ -120,9 +120,11 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.AnalysisCacheScalarFieldEnum = {
+exports.Prisma.AnalysisResultScalarFieldEnum = {
   id: 'id',
   inputHash: 'inputHash',
+  matchScore: 'matchScore',
+  jobTitle: 'jobTitle',
   resumeText: 'resumeText',
   jobDescText: 'jobDescText',
   resultJson: 'resultJson',
@@ -151,7 +153,7 @@ exports.Prisma.JsonNullValueFilter = {
 
 
 exports.Prisma.ModelName = {
-  AnalysisCache: 'AnalysisCache'
+  AnalysisResult: 'AnalysisResult'
 };
 
 /**

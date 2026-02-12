@@ -33,9 +33,14 @@ export function NavMain({
               asChild
               isActive={item.isActive}
               tooltip={item.title}
+              className={`transition-all duration-200 ${
+                item.isActive 
+                  ? "bg-white shadow-md text-blue-600 font-semibold" 
+                  : "text-muted-foreground hover:text-blue-600"
+              }`}
             >
               <Link href={item.url}>
-                <item.icon />
+                <item.icon className={item.isActive ? "text-blue-600" : ""} />
                 <span>{item.title}</span>
               </Link>
             </SidebarMenuButton>

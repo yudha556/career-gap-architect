@@ -10,6 +10,6 @@ export class AppService {
   }
 
   async getAnalysisCacheCount(): Promise<number> {
-    return this.prisma.analysisCache.count();
+    return this.prisma.analysisResult.count();
   }
 }

@@ -93,9 +93,11 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.AnalysisCacheScalarFieldEnum = {
+exports.Prisma.AnalysisResultScalarFieldEnum = {
   id: 'id',
   inputHash: 'inputHash',
+  matchScore: 'matchScore',
+  jobTitle: 'jobTitle',
   resumeText: 'resumeText',
   jobDescText: 'jobDescText',
   resultJson: 'resultJson',
@@ -124,7 +126,7 @@ exports.Prisma.JsonNullValueFilter = {
 
 
 exports.Prisma.ModelName = {
-  AnalysisCache: 'AnalysisCache'
+  AnalysisResult: 'AnalysisResult'
 };
 /**
  * Create the Client
@@ -134,10 +136,10 @@ const config = {
   "clientVersion": "7.3.0",
   "engineVersion": "9d6ad21cbbceab97458517b147a6a09ff43aa735",
   "activeProvider": "postgresql",
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  // Pastikan output ini sesuai dengan import di PrismaService kamu\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n}\n\nmodel AnalysisCache {\n  id          String   @id @default(cuid())\n  inputHash   String   @unique\n  resumeText  String\n  jobDescText String\n  resultJson  Json\n  createdAt   DateTime @default(now())\n}\n"
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n}\n\nmodel AnalysisResult {\n  id          String   @id @default(cuid())\n  inputHash   String   @unique\n  matchScore  Int      @default(0)\n  jobTitle    String   @default(\"General Application\")\n  resumeText  String   @db.Text\n  jobDescText String   @db.Text\n  resultJson  Json\n  createdAt   DateTime @default(now())\n\n  @@index([matchScore])\n  @@index([createdAt])\n}\n"
 }
 
-config.runtimeDataModel = JSON.parse("{\"models\":{\"AnalysisCache\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"inputHash\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"resumeText\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"jobDescText\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"resultJson\",\"kind\":\"scalar\",\"type\":\"Json\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
+config.runtimeDataModel = JSON.parse("{\"models\":{\"AnalysisResult\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"inputHash\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"matchScore\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"jobTitle\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"resumeText\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"jobDescText\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"resultJson\",\"kind\":\"scalar\",\"type\":\"Json\"},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"type\":\"DateTime\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
 defineDmmfProperty(exports.Prisma, config.runtimeDataModel)
 config.compilerWasm = {
       getRuntime: async () => require('./query_compiler_fast_bg.js'),
