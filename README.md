@@ -1,56 +1,52 @@
 # Career Gap Architect
 
-Career Gap Architect is a full-stack application that analyzes the gap between a user's **Resume** and a **Target Job Description (JD)**.  
-The system generates a structured **gap analysis**, including missing skills, a learning roadmap, and targeted interview questions using AI.
+**Career Gap Architect** is a full-stack AI-powered application designed to analyze the gap between a candidate's **Resume** and a **Target Job Description (JD)**. 
+The system provides a structured gap analysis, including missing skills, a personalized learning roadmap, and targeted interview questions using advanced AI models.
 
-This project is built as part of a technical assessment to demonstrate system design, backend architecture, and frontend integration.
-
----
-
-##  Core Features
-
-- Upload or paste **Resume** and **Job Description**
-- AI-powered **Gap Analysis**, including:
-  - Missing Skills
-  - 3 Concrete Learning Steps
-  - 3 Targeted Interview Questions
-- **Caching mechanism** to avoid redundant AI calls for identical inputs
-- Clean and readable UI with Markdown rendering
-- Graceful error handling and validation layer
+This project is built as part of a technical assessment to demonstrate modern system design, robust backend architecture, and seamless frontend integration.
 
 ---
 
-##  Tech Stack
+## 🚀 Core Features
+
+- **Dual Input Method**: Upload Resume in PDF format or paste as plain text.
+- **AI-Powered Analysis**: Detailed gap identification using Groq AI integration.
+- **Actionable Roadmap**: 3 concrete steps to bridge skills gaps with estimated timelines.
+- **Interview Prep**: Targeted technical questions using the **STAR Method** guide.
+- **Smart Caching**: Input hashing mechanism to avoid redundant AI calls and save tokens.
+- **Persistence**: Save and view history of past analyses with a dedicated dashboard.
+
+---
+
+## 🛠 Tech Stack
 
 ### Frontend
-- Next.js (App Router)
-- Tailwind CSS
-- shadcn/ui
-- Lucide Icons
-- React Markdown
+- **Next.js** (App Router & Turbopack)
+- **Tailwind CSS** & **shadcn/ui** for modern UI
+- **Lucide Icons** & **Axios** for API communication
 
 ### Backend
-- NestJS
-- Prisma ORM
-- AI Service Integration
+- **NestJS** (Modular Architecture)
+- **Prisma ORM** for database management
+- **Groq AI** for high-speed LLM processing
 
 ### Database
-- PostgreSQL (Supabase)
+- **PostgreSQL** (Hosted via Supabase)
 
-### Monorepo
-- pnpm workspace
-- Turborepo
+### Workspace Management
+- **pnpm Workspaces** (Monorepo)
+- **Concurrent Execution** for optimized development workflow
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
-``` bash
+```bash
 career-gap-architect/
 ├─ apps/
-│ ├─ web/ # Frontend (Next.js)
-│ └─ api/ # Backend (NestJS)
-├─ package.json # Turborepo config
+│  ├─ web/   # Frontend (Next.js) - Port 3000
+│  └─ api/   # Backend (NestJS)  - Port 4000
+├─ package.json # Root config & orchestration
 ├─ pnpm-workspace.yaml
 └─ README.md
 ```
@@ -66,6 +62,11 @@ pnpm install
 ```
 ### Run all apps (Fe & BE)
     pnpm dev
+
+### setup ENV
+  DATABASE_URL="your_postgresql_url"
+  GROQ_API_KEY="your_groq_api_key"
+  PORT=4000
 
 ## System Design Notes
 - A hashing mechanism is used on Resume + JD input to detect duplicate submissions.
